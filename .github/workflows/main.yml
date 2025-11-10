@@ -16,7 +16,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.testgithubaction.somee.com   # ⚠️ KHÔNG có http://
-          username: ${{ secrets.SOMEE_FTP_USERNAME }}
+          username: ${{ secrets.SOMEE_FTP_USER }}
           password: ${{ secrets.SOMEE_FTP_PASSWORD }}
           port: 21
           protocol: ftp
