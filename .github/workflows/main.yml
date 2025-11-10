@@ -1,4 +1,4 @@
-name: 🚀 Deploy to Somee via FTP
+name: Deploy to Somee via FTP
 
 on:
   push:
