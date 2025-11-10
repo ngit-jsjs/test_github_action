@@ -16,7 +16,7 @@ jobs:
       - name: Upload HTML to Somee FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: http://testgithubaction.somee.com/
+          url: testgithubaction.somee.com
           username: ${{ secrets.SOMEE_FTP_USER }}
           password: ${{ secrets.SOMEE_FTP_PASS }}
           local-dir: ./ # nếu file HTML nằm ở gốc repo
