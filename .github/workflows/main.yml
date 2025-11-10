@@ -1,22 +1,25 @@
-name: Deploy HTML to Somee
+name: 🚀 Deploy to Somee via FTP
 
 on:
   push:
     branches:
-      - main # tự deploy khi bạn push code lên nhánh main
+      - main   # hoặc master nếu bạn dùng nhánh đó
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Upload HTML to Somee FTP
+      - name: Deploy files to Somee
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp://testgithubaction.somee.com/www.testgithubaction.somee.com
-          username: ${{ secrets.SOMEE_FTP_USER }}
-          password: ${{ secrets.SOMEE_FTP_PASS }}
-          local-dir: ./ # nếu file HTML nằm ở gốc repo
+          server: ftp.testgithubaction.somee.com   # ⚠️ KHÔNG có http://
+          username: ${{ secrets.SOMEE_FTP_USERNAME }}
+          password: ${{ secrets.SOMEE_FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: .          # upload toàn bộ thư mục git
+          server-dir: /         # thư mục gốc web Somee
+          log-level: verbose
