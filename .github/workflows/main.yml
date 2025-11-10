@@ -17,7 +17,7 @@ jobs:
         with:
           server: ftp.testgithubaction.somee.com   # ⚠️ KHÔNG có http://
           username: ${{ secrets.SOMEE_FTP_USER }}
-          password: ${{ secrets.SOMEE_FTP_PASSWORD }}
+          password: ${{ secrets.SOMEE_FTP_PASS }}
           port: 21
           protocol: ftp
           local-dir: .          # upload toàn bộ thư mục git
