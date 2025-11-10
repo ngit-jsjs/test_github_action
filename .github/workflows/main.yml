@@ -15,7 +15,7 @@ jobs:
       - name: Deploy files to Somee
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp://testgithubaction.somee.com/www.testgithubaction.somee.com
+          server: http://testgithubaction.somee.com/
           username: ${{ secrets.SOMEE_FTP_USER }}
           password: ${{ secrets.SOMEE_FTP_PASS }}
           port: 21
