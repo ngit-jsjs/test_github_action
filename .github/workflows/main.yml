@@ -1,0 +1,22 @@
+name: Test GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lấy code
+        uses: actions/checkout@v4
+
+      - name: In danh sách file & nội dung index.html
+        run: |
+          echo "=== Files trong repo ==="
+          ls -la
+          echo ""
+          echo "=== Nội dung index.html ==="
+          cat index.html
