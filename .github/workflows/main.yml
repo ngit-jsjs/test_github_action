@@ -20,6 +20,6 @@ jobs:
           password: ${{ secrets.SOMEE_FTP_PASS }}
           port: 21
           protocol: ftp
-          local-dir: .          # upload toàn bộ thư mục git
+          local-dir: ./          # upload toàn bộ thư mục git
           server-dir: /         # thư mục gốc web Somee
           log-level: verbose
