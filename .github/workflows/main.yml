@@ -15,11 +15,11 @@ jobs:
       - name: Deploy files to Somee
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.testgithubaction.somee.com
+          server: testgithubaction.somee.com
           username: ${{ secrets.SOMEE_FTP_USER }}
           password: ${{ secrets.SOMEE_FTP_PASS }}
           port: 21
           protocol: ftp
-          local-dir: ./          # upload toàn bộ thư mục git
-          server-dir: /wwwroot/         # thư mục gốc web Somee
+          local-dir: ./
+          server-dir: /www.testgithubaction.somee.com/       # thư mục gốc web Somee
           log-level: verbose
